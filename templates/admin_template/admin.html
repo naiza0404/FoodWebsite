@@ -1,0 +1,130 @@
+{% extends 'admin_template/base.html' %}
+{% block main_content %}
+
+<script>
+  {% if error_message %}
+     alert("{{ error_message }}")
+     window.location.href = '/admin_layout'
+  {% endif %}
+
+</script>
+<main style="margin-top: 58px">
+    <div class="container pt-4">
+        <section>
+            <div class="row">
+              <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between px-md-1">
+                      <div class="align-self-center">
+                        <span class="fas fa-shopping-bag text-info fa-3x"></span>
+                      </div>
+                      <div class="text-end">
+                        <h3>{{total_product}}</h3>
+                        <p class="mb-0">Total products</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between px-md-1">
+                      <div class="align-self-center">
+                        <i class="fas fa-tag text-warning fa-3x"></i></i>
+                      </div>
+                      <div class="text-end">
+                        <h3>{{total_category}}</h3>
+                        <p class="mb-0">Total Categories</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between px-md-1">
+                      <div class="align-self-center">
+                        <i class="fas fa-dollar-sign text-success fa-3x"></i>
+                      </div>
+                      <div class="text-end">
+                        <h3>{{total_price}} $</h3>
+                        <p class="mb-0">Total Price</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between px-md-1">
+                      <div class="align-self-center">
+                        <i class="fas fa-user text-danger fa-3x"></i>
+                      </div>
+                      <div class="text-end">
+                        <h3>{{total_customer}}</h3>
+                        <p class="mb-0">Total Visits</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+      <!--Section: Sales Performance KPIs-->
+      <section class="mb-4">
+        <div class="card">
+          <div class="card-header text-center py-3">
+            <h5 class="mb-0 text-center">
+              <strong>Products</strong>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Category</th>
+                        <!-- New Column Header -->
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for products in Products %}
+                      <tr>
+                        <th scope="row">{{products.id}}</th>
+                        <td>{{products.image}}</td>
+                        <td>{{products.title}}</td>
+                        <td>{{products.price}} $</td>
+                        <td>{{products.description}}</td>
+                        <td>{{products.category}}</td>
+                        <!-- New Column Data (Edit and Delete Buttons) -->
+                        <td>
+                            <a href="/admin_layout/edit/{{products.id}}">
+                          <button class="btn btn-primary">Edit</button>
+                            </a>
+                            <a href="/admin_layout/delete/{{products.id}}">
+                                <button class="btn btn-danger">Delete</button>
+                            </a>
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Sales Performance KPIs-->
+    </div>
+  </main>
+{% endblock main_content %}

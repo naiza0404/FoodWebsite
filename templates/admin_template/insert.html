@@ -1,0 +1,61 @@
+{% extends 'admin_template/base.html' %}
+{% block main_content %}
+
+
+
+<div class="container" style="margin-left: 700px; width: 500px;margin-top: 200px;">
+    <script>
+        {% if error_message %}
+        alert("{{ error_message }}");
+        window.location.href = '/admin_layout'
+    {% endif %}
+    </script>
+
+    <form method="post" action="/admin_layout/insert_admin/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h3 class="text-center">INSERT PRODUCT</h3>
+        <!-- Email input -->
+        <div class="form-outline mb-4 mt-5">
+            <input type="file" id="form1Example1" class="form-control" accept="image/*" name="image" />
+        </div>
+          
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="text" name="title" id="form1Example2" class="form-control" />
+          <label class="form-label" for="form1Example2">Title</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="text" name="price" id="form1Example2" class="form-control" />
+            <label class="form-label" for="form1Example2">Price</label>
+        </div>
+
+        <div class="form-outline mb-4">
+        <input type="text" name="description" id="form1Example2" class="form-control" />
+        <label class="form-label" for="form1Example2">Description</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <select id="form1Example2" class="form-select" name="category">
+                <option value="" disabled selected>Select a category</option>
+                
+                {% for categories in category %}
+                <option value="{{ categories.id }}"> {{ categories }} </option>
+                {% endfor %}
+                
+            </select>
+        </div>
+        
+        <!-- 2 column grid layout for inline styling -->
+      
+      
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block">INSERT</button>
+      </form>
+
+</div>
+
+
+
+{% endblock main_content %}

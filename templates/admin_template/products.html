@@ -1,0 +1,62 @@
+{% extends 'admin_template/base.html' %}
+{% block main_content %}
+<main style="margin-top: 58px">
+    <div class="container pt-4">
+      <!--Section: Sales Performance KPIs-->
+      <section class="mb-4">
+        <div class="card">
+          <div class="card-header text-center py-3">
+            <h5 class="mb-0 text-center">
+              <strong>Products</strong>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Category</th>
+                        <!-- New Column Header -->
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for products in Products %}
+                      <tr>
+                        <th scope="row">{{products.id}}</th>
+                        <td>{{products.image}}</td>
+                        <td>{{products.title}}</td>
+                        <td>{{products.price}} $</td>
+                        <td>{{products.description}}</td>
+                        <td>{{products.category}}</td>
+                        <!-- New Column Data (Edit and Delete Buttons) -->
+                        <td>
+                            <a href="edit/{{products.id}}">
+                          <button class="btn btn-primary">Edit</button>
+                            </a>
+                            <a href="admin_layout/{{products.id}}">
+                                <button class="btn btn-danger">Delete</button>
+                            </a>
+                        </td>
+                      </tr>
+                      {% endfor %}
+                      
+                    </tbody>
+                  </table>
+                  
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Sales Performance KPIs-->
+
+     
+
+    </div>
+  </main>
+{% endblock main_content %}

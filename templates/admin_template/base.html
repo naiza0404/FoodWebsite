@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+   <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+    rel="stylesheet"
+    />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="{% static 'admin_template/css/mdb.min.css' %}" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="{% static 'admin_template/css/admin.css' %}" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--Main Navigation-->
+  <header>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+          <a href="/admin_layout" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
+          </a>
+          <a href="/admin_layout" class="list-group-item list-group-item-action py-2 ripple active">
+            <i class="fas fa-chart-area fa-fw me-3"></i><span>Dashboard</span>
+          </a>
+          <a href="/admin_layout/insert_admin" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-plus fa-fw me-3"></i>
+            <span>Insert</span></a>
+          <a href="/admin_layout/products" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-box fa-fw me-3"></i>
+            <span>Products</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+            <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a>
+
+          <a href="/admin_layout/users" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-users fa-fw me-3"></i><span>Users</span></a>
+         
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+          aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="/admin_layout">
+          <i class='fas fa-user-alt' style='font-size:36px'></i>
+        </a>
+      
+        <a class="navbar-brand" href="/">
+          <i class="fas fa-home fa-2x"></i> 
+        </a>
+        <!-- Search form -->
+       
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+  <!--Main Navigation-->
+
+
+  {% block main_content %}
+  {% endblock main_content %}
+
+  
+  <!-- MDB -->
+  <script type="text/javascript" src="{% static 'admin_template/js/mdb.min.js'%}"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="{% static 'admin_template/js/admin.js' %}"></script>
+  <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+></script>
+
+</body>
+
+</html>

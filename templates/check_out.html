@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Success</title>
+    <!-- Include Font Awesome CSS (you can download it or use a CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .success-icon {
+            color: green;
+            font-size: 100px;
+            margin-top: 50px;
+        }
+        .success-message {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+
+{% if error_message %}
+<script>
+    setTimeout(function() {
+        alert("{{ error_message }}");
+        window.location.href = '/';
+    }, 3000); // 3000 milliseconds = 3 seconds
+</script>
+{% endif %}
+
+</head>
+<body>
+     <div class="checkout-success" style="margin-top: 120px;">
+        <i class="fas fa-check-circle success-icon"></i>
+        <p class="success-message">Payment Successful!</p>
+    </div>
+
+    <div class="user-details mt-5">
+        <h2>User Details</h2>
+        <p>Name: John Doe</p>
+        <p>Email: johndoe@example.com</p>
+        <p>Shipping Address: 123 Main St, Cityville, Country</p>
+    </div>
+   
+</body>
+</html>

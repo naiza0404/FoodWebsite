@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Registration Successful</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .success-content {
+            text-align: center;
+        }
+        .custom-check-sign {
+            fill: #5DB75D;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+<script>
+    // JavaScript code to redirect after 2 seconds
+    setTimeout(function() {
+        window.location.href = "/login";
+    }, 2000); // 2000 milliseconds = 2 seconds
+</script>
+</head>
+<body class="success-page">
+    <div class="success-content">
+        <!-- Replace this SVG with the new checkmark SVG -->
+        <svg class="custom-check-sign" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M256 8c-137 0-248 111-248 248s111 248 248 248 248-111 248-248S393 8 256 8zm130.2 155.8L233 373.1c-7.8 7.8-20.5 7.8-28.3 0L125.8 290.3c-7.8-7.8-7.8-20.5 0-28.3 7.8-7.8 20.5-7.8 28.3 0l58.9 58.9 140.9-140.9c7.8-7.8 20.5-7.8 28.3 0 7.8 7.8 7.8 20.5 0 28.3z"/>
+        </svg>
+        <h1>Registration Successful</h1>
+        <p>Your registration was successful. You can now sign in using your credentials.</p>
+        <a href="/login">Sign In</a>
+    </div>
+</body>
+</html>
