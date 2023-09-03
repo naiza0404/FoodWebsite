@@ -335,3 +335,4 @@ def checkout(request):
 
 
     return render(request,'check_out.html',context)
+
