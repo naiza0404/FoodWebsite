@@ -336,3 +336,6 @@ def checkout(request):
 
     return render(request,'check_out.html',context)
 
+
+def blog(request):
+    return render(request,'blog.html')
