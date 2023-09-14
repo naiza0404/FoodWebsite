@@ -40,19 +40,18 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	        	<li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-	        	<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta"><a href="reservation.html" class="nav-link">Book a table</a></li>
+	        	<li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+	        	<li class="nav-item active"><a href="/about" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="/" class="nav-link">Menu</a></li>
+	        	<li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('static/images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static "images/bg_3.jpg" %}');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -188,7 +187,7 @@
 				<div class="row">
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(static/images/chef-4.jpg);"></div>
+							<div class="img" style="background-image: url('{% static "images/chef-4.jpg" %}');"></div>
 							<div class="text pt-4">
 								<h3>John Smooth</h3>
 								<span class="position mb-2">Restaurant Owner</span>
@@ -207,7 +206,7 @@
 					</div>
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(static/images/chef-2.jpg);"></div>
+							<div class="img" style="background-image: url('{% static "images/chef-2.jpg" %}');"></div>
 							<div class="text pt-4">
 								<h3>Rebeca Welson</h3>
 								<span class="position mb-2">Head Chef</span>
@@ -226,7 +225,7 @@
 					</div>
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(static/images/chef-3.jpg);"></div>
+							<div class="img" style="background-image: url('{% static "images/chef-3.jpg" %}');"></div>
 							<div class="text pt-4">
 								<h3>Kharl Branyt</h3>
 								<span class="position mb-2">Chef</span>
@@ -245,7 +244,7 @@
 					</div>
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(static/images/chef-1.jpg);"></div>
+							<div class="img" style="background-image:url('{% static "images/chef-1.jpg" %}');"></div>
 							<div class="text pt-4">
 								<h3>Luke Simon</h3>
 								<span class="position mb-2">Chef</span>
@@ -267,7 +266,7 @@
 		</section>
 		
 		<!-- <section class="ftco-section testimony-section" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5"> -->
-		<section class="ftco-section testimony-section img" style="background-image: url(static/images/bg_5.jpg);">
+		<section class="ftco-section testimony-section img" style="background-image: url('{% static "images/bg_5.jpg" %}');">
 			<div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center mb-5">
@@ -281,7 +280,7 @@
             <div class="carousel-testimony owl-carousel ftco-owl">
               <div class="item">
                 <div class="testimony-wrap text-center pb-5">
-                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                  <div class="user-img mb-4" style="background-image: url('{% static "images/person_1.jpg" %}');">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
@@ -295,7 +294,7 @@
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center pb-5">
-                  <div class="user-img mb-4" style="background-image: url(static/images/person_2.jpg)">
+                  <div class="user-img mb-4" style="background-image: url('{% static "images/person_2.jpg" %}');">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
@@ -309,7 +308,7 @@
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center pb-5">
-                  <div class="user-img mb-4" style="background-image: url(static/images/person_3.jpg)">
+                  <div class="user-img mb-4" style="background-image: url('{% static "images/person_3.jpg" %}');">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
@@ -323,7 +322,7 @@
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center pb-5">
-                  <div class="user-img mb-4" style="background-image: url(static/images/person_4.jpg)">
+                  <div class="user-img mb-4" style="background-image: url('{% static "images/person_4.jpg" %}');">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
@@ -337,7 +336,7 @@
               </div>
               <div class="item">
                 <div class="testimony-wrap text-center pb-5">
-                  <div class="user-img mb-4" style="background-image: url(static/images/person_3.jpg)">
+                  <div class="user-img mb-4" style="background-image: url('{% static "images/person_3.jpg" %}');">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
@@ -359,27 +358,27 @@
 			<div class="container-fluid px-0">
 				<div class="row no-gutters">
 					<div class="col-md">
-						<a href="#" class="instagram img d-flex align-items-center justify-content-center" style="background-image: url(images/insta-1.jpg);">
+						<a href="#" class="instagram img d-flex align-items-center justify-content-center" style="background-image:url('{% static "images/insta-1.jpg" %}');">
 							<span class="ion-logo-instagram"></span>
 						</a>
 					</div>
 					<div class="col-md">
-						<a href="#" class="instagram img d-flex align-items-center justify-content-center" style="background-image: url(images/insta-2.jpg);">
+						<a href="#" class="instagram img d-flex align-items-center justify-content-center" style="background-image:url('{% static "images/insta-2.jpg" %}');">
 							<span class="ion-logo-instagram"></span>
 						</a>
 					</div>
 					<div class="col-md">
-						<a href="#" class="instagram img d-flex align-items-center justify-content-center" style="background-image: url(images/insta-3.jpg);">
+						<a href="#" class="instagram img d-flex align-items-center justify-content-center" style="background-image: url('{% static "images/insta-3.jpg" %}');">
 							<span class="ion-logo-instagram"></span>
 						</a>
 					</div>
 					<div class="col-md">
-						<a href="#" class="instagram img d-flex align-items-center justify-content-center" style="background-image: url(images/insta-4.jpg);">
+						<a href="#" class="instagram img d-flex align-items-center justify-content-center" style="background-image:url('{% static "images/insta-4.jpg" %}');">
 							<span class="ion-logo-instagram"></span>
 						</a>
 					</div>
 					<div class="col-md">
-						<a href="#" class="instagram img d-flex align-items-center justify-content-center" style="background-image: url(images/insta-5.jpg);">
+						<a href="#" class="instagram img d-flex align-items-center justify-content-center" style="background-image:url('{% static "images/insta-5.jpg" %}');">
 							<span class="ion-logo-instagram"></span>
 						</a>
 					</div>
