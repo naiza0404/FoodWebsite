@@ -2,14 +2,13 @@ from collections import Counter
 import hashlib
 from cv2 import sumElems
 from django.shortcuts import get_object_or_404, render,redirect
-from .models import Customer,Admin,Product,Category,Cart
+from .models import Customer,Admin,Product,Category,Cart,Reservation
 from django.contrib import messages
 from django.shortcuts import get_object_or_404
 from django.db.models import Sum
 
 
 # Create your views here.
-
 def index(request):
     
 
@@ -343,3 +342,27 @@ def blog(request):
 
 def contact(request):
     return render(request,'contact.html')
+
+
+def reservation(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        date = request.POST.get('date')
+        time_field = request.POST.get('time')
+        person = request.POST.get('person')
+        reservation = Reservation(
+            name=name,
+            email=email,
+            phone=phone,
+            date=date,
+            time_field=time_field,
+            person=person
+        )
+
+        reservation.save()
+
+
+    return redirect('/')
+

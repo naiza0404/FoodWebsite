@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product,Category,Customer,Admin,Cart,checkout
+from .models import Product,Category,Customer,Admin,Cart,checkout,Reservation
 
 # Register your models here.
 
@@ -30,3 +30,10 @@ class CartTable(admin.ModelAdmin):
 admin.site.register(Cart,CartTable)
 
 admin.site.register(checkout)
+
+
+class ReservationTable(admin.ModelAdmin):
+    list_display = ('id','name','email','phone','date','time_field','person')
+
+
+admin.site.register(Reservation,ReservationTable)

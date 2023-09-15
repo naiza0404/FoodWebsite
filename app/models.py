@@ -80,3 +80,16 @@ class checkout(models.Model):
         return self.name
     
 
+class Reservation(models.Model):
+    id =  models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100,default='')
+    email = models.CharField(max_length=100,default='')
+    phone = models.CharField(max_length=100,default='')
+    date = models.DateField(auto_now=True)
+    time_field = models.TimeField(auto_now=True)
+    person = models.CharField(max_length=100,default='')
+
+
+    def  __str__(self):
+        return self.name
+    
