@@ -8,6 +8,7 @@ from django.shortcuts import get_object_or_404
 from django.db.models import Sum
 
 
+
 # Create your views here.
 def index(request):
     
@@ -366,3 +367,11 @@ def reservation(request):
 
     return redirect('/')
 
+
+
+def reservationdata(request):
+    reserv_data =  Reservation.objects.all()
+    context = {
+        'Products':reserv_data
+    }
+    return render(request,'admin_template/reservation.html',context)

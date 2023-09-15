@@ -1,0 +1,57 @@
+{% extends 'admin_template/base.html' %}
+{% block main_content %}
+<main style="margin-top: 58px">
+    <div class="container pt-4">
+      <!--Section: Sales Performance KPIs-->
+      <section class="mb-4">
+        <div class="card">
+          <div class="card-header text-center py-3">
+            <h5 class="mb-0 text-center">
+              <strong>Products</strong>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <!-- New Column Header -->
+                        <th scope="col">Person</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for products in Products %}
+                      <tr>
+                        <th scope="row">{{products.id}}</th>
+                        <td>{{products.name}}</td>
+                        <td>{{products.email}}</td>
+                        <td>{{products.phone}} $</td>
+                        <td>{{products.date}}</td>
+                        <td>{{products.time_field}}</td>
+                        <!-- New Column Data (Edit and Delete Buttons) -->
+                        <td>
+                            {{products.person}}
+                        </td>
+                      </tr>
+                      {% endfor %}
+                      
+                    </tbody>
+                  </table>
+                  
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Sales Performance KPIs-->
+
+     
+
+    </div>
+  </main>
+{% endblock main_content %}

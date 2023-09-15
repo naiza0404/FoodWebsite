@@ -21,6 +21,7 @@ urlpatterns = [
     path('checkout/',checkout,name="chechout-page"),
     path('blog/',blog,name="blog-page"),
     path('contact/',contact,name="contact-page"),
-    path('reservation/',reservation,name="reservation")
+    path('reservation/',reservation,name="reservation"),
+    path('admin_layout/reservation/',reservationdata,name="reservation-table")
     
 ]
